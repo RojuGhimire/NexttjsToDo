@@ -17,12 +17,9 @@ const AddTask = () => {
     await addTodo({
       id: uuidv4(),
       text: newTaskValue,
+      completed: false, // Add the completed property
     });
-    setNewTaskValue("");
-    setModalOpen(false);
-    router.refresh();
   };
-
   return (
     <div>
       <button

@@ -22,6 +22,7 @@ const Task: React.FC<TaskProps> = ({ task }) => {
     await editTodo({
       id: task.id,
       text: taskToEdit,
+      completed: task.completed, // Ensure completed is included
     });
     setOpenModalEdit(false);
     router.refresh();
